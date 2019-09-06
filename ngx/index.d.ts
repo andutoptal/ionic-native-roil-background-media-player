@@ -25,8 +25,9 @@ export declare class ROILBackgroundMediaPlayer extends IonicNativePlugin {
     setMediaSource(src: string): Promise<void>;
     /**
      * @param currentTime {number} Current position in played source
+     * @param playbackSpeed {number} Playback speed, defaults to 1.0
      */
-    play(currentTime: number): Promise<void>;
+    play(currentTime: number, playbackSpeed?: number): Promise<void>;
     /**
      * @returns Current position in played source
      */
