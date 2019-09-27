@@ -1,4 +1,12 @@
 import { IonicNativePlugin } from '@ionic-native/core';
+export declare enum PlayerState {
+    PLAYING = "playing",
+    PAUSED = "paused"
+}
+export interface PlayerPositionAndState {
+    position: number;
+    state: PlayerState;
+}
 /**
  * @name ROILBackgroundMediaPlayer
  * @description
@@ -33,7 +41,7 @@ export declare class ROILBackgroundMediaPlayerOriginal extends IonicNativePlugin
     /**
      * @returns {number} Current position in played source
      */
-    pause(): Promise<number>;
+    pause(): Promise<PlayerPositionAndState>;
 }
 
 export declare const ROILBackgroundMediaPlayer: ROILBackgroundMediaPlayerOriginal;
